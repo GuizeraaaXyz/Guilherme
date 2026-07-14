@@ -1,0 +1,7 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { Container } from "@/components/ui/container";
+import { SectionHeading } from "@/components/ui/section-heading";
+import { services } from "@/data/content";
+import { Reveal } from "@/components/ui/reveal";
+export function Services() { return <section id="servicos" className="scroll-mt-24 py-24 sm:py-32"><Container><Reveal><SectionHeading eyebrow="Serviços" title="Soluções digitais para diferentes necessidades." description="Do primeiro contato do cliente até a gestão completa do negócio, desenvolvemos produtos digitais pensados para gerar resultado."/></Reveal><div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-white/8 bg-white/8 md:grid-cols-2 lg:grid-cols-3">{services.map(({icon:Icon,title,description})=><article key={title} className="group bg-[#090e18] p-7 transition hover:bg-[#0c1321] sm:p-8"><div className="grid size-11 place-items-center rounded-xl border border-blue-400/15 bg-blue-400/8 text-blue-400"><Icon className="size-5"/></div><h3 className="mt-6 text-xl font-semibold text-white">{title}</h3><p className="mt-3 min-h-24 text-sm leading-6 text-slate-400">{description}</p><Link href="#orcamento" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-blue-400 hover:text-blue-300">Quero saber mais <ArrowRight className="size-4 transition group-hover:translate-x-1"/></Link></article>)}</div></Container></section>; }

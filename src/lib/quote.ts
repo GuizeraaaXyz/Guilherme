@@ -1,0 +1,2 @@
+export type QuoteData={name:string;company:string;whatsapp:string;email:string;projectType:string;investment:string;deadline:string;description:string};
+export function buildQuoteMessage(d:QuoteData){return [`Olá! Gostaria de solicitar um orçamento.`,``,`*Nome:* ${d.name}`,d.company?`*Empresa:* ${d.company}`:"",`*WhatsApp:* ${d.whatsapp}`,`*E-mail:* ${d.email}`,`*Tipo de projeto:* ${d.projectType}`,`*Investimento:* ${d.investment}`,`*Prazo desejado:* ${d.deadline}`,``,`*Descrição:*`,` ${d.description}`].filter(Boolean).join("\n")}

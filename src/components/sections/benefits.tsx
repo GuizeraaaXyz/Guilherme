@@ -1,0 +1,5 @@
+import { Check } from "lucide-react";
+import { Container } from "@/components/ui/container";
+import { SectionHeading } from "@/components/ui/section-heading";
+import { benefits } from "@/data/content";
+export function Benefits() { return <section className="border-y border-white/8 bg-[#0a101c] py-24 sm:py-28"><Container className="grid gap-12 lg:grid-cols-[.9fr_1.1fr] lg:items-center"><SectionHeading eyebrow="O que entregamos" title="Mais do que um site bonito." description="Cada projeto parte da sua necessidade real. Unimos clareza visual, desempenho e uma base técnica sólida para criar algo útil hoje e preparado para evoluir amanhã."/><div className="grid gap-3 sm:grid-cols-2">{benefits.map(x=><div key={x} className="flex items-center gap-3 rounded-xl border border-white/8 bg-white/[.025] px-4 py-4 text-sm text-slate-200"><span className="grid size-7 shrink-0 place-items-center rounded-full bg-blue-500/12 text-blue-400"><Check className="size-4"/></span>{x}</div>)}</div></Container></section>; }
